@@ -9,8 +9,13 @@ import lombok.*;
 @EqualsAndHashCode(of = {"immatriculation"})
 @ToString
 @Builder
+@Entity
+@Table(name = "EMPLOYEE")
 public class Employe {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTIY)
+    @Column(name = "EMPLOYEE_ID")
     private Integer id;
     private String nom;
     private String prenom;
